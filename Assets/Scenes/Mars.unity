@@ -761,7 +761,6 @@ GameObject:
   - component: {fileID: 1505430839}
   - component: {fileID: 1505430838}
   - component: {fileID: 1505430837}
-  - component: {fileID: 1505430836}
   m_Layer: 0
   m_Name: Mars - Sphere
   m_TagString: Untagged
@@ -769,20 +768,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1505430836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505430835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 136d25ce44d5e4cab9060a7b25ef59ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlanetObject: {fileID: 1505430835}
-  RotationVector: {x: 0, y: 50, z: 0}
 --- !u!135 &1505430837
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -866,7 +851,7 @@ Transform:
   m_GameObject: {fileID: 1505430835}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4}
+  m_LocalPosition: {x: 0, y: 0, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -903,6 +888,58 @@ Transform:
   m_Children:
   - {fileID: 732470591}
   m_Father: {fileID: 28918394}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2014126417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2014126419}
+  - component: {fileID: 2014126418}
+  m_Layer: 0
+  m_Name: InteractionController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2014126418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014126417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52db53203bc6e464eb8b726d8d4a390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlanetObject: {fileID: 1505430835}
+  RotationSpeed: 0.2
+  InvertRotation: 0
+  MinScale: 0.1
+  MaxScale: 3
+  PinchSensitivity: 0.01
+  AutoRotate: 1
+  AutoRotationSpeed: {x: 0, y: 15, z: 0}
+--- !u!4 &2014126419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014126417}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 720, y: 1280, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2062396306
 GameObject:
@@ -1046,3 +1083,4 @@ SceneRoots:
   - {fileID: 1505430840}
   - {fileID: 1221986049}
   - {fileID: 1245904765}
+  - {fileID: 2014126419}
